@@ -1,0 +1,2 @@
+<template><div class="panel"><h3>{{ project.name }}</h3><p>{{ project.category }} • {{ project.status }}</p><p>Priority: {{ project.priority }}</p><progress :value="project.progress || 0" max="100" style="width:100%"/><p>{{ project.progress || 0 }}%</p><RouterLink :to="`/projects/${project.id}`">Open</RouterLink></div></template>
+<script setup lang="ts">import type { Project } from '../types/project';defineProps<{project:Project}>();</script>

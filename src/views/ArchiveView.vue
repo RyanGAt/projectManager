@@ -1,0 +1,2 @@
+<template><div><h1>Archive</h1><div class="card-grid"><ProjectCard v-for="p in archived" :key="p.id" :project="p"/></div></div></template>
+<script setup lang="ts">import { computed, onMounted, ref } from 'vue';import { projectService } from '../db/projectService';import ProjectCard from '../components/ProjectCard.vue';const projects=ref<any[]>([]);onMounted(async()=>projects.value=await projectService.all());const archived=computed(()=>projects.value.filter(p=>['Finished','Abandoned','Archived'].includes(p.status)));</script>

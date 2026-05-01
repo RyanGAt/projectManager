@@ -1,0 +1,2 @@
+<template><aside class="sidebar"><h2>ProjectVault</h2><nav><p v-for="item in items" :key="item.to"><RouterLink style="color:white" :to="item.to">{{ item.label }}</RouterLink></p></nav></aside></template>
+<script setup lang="ts">const items=[{label:'Dashboard',to:'/'},{label:'Projects',to:'/projects'},{label:'Tasks',to:'/tasks'},{label:'Archive',to:'/archive'},{label:'Settings',to:'/settings'}];</script>
