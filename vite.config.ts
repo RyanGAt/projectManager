@@ -7,8 +7,9 @@ export default defineConfig({
   server: {
     strictPort: true,
     port: 1420,
-    hmr: {
-      port: 1421
+    hmr: false,
+    watch: {
+      ignored: () => true
     }
   }
 });

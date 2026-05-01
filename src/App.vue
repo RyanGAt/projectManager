@@ -1,2 +1,21 @@
-<template><div class="app-layout"><Sidebar/><main class="main"><RouterView/></main><aside class="right-panel"><h4>Quick Notes</h4><textarea placeholder="Write quick notes..."></textarea><h4>Next actions</h4><p>Plan next sprint tasks.</p></aside></div></template>
-<script setup lang="ts">import Sidebar from './components/Sidebar.vue';</script>
+<template>
+  <div class="app-shell">
+    <header class="topbar">
+      <RouterLink class="topbar-brand" to="/">
+        <span class="brand-mark">PV</span>
+        <div>
+          <strong>ProjectVault</strong>
+          <small>Sunshine Plunge workspace</small>
+        </div>
+      </RouterLink>
+      <nav class="topbar-nav">
+        <RouterLink to="/">Projects</RouterLink>
+        <RouterLink to="/archive">Archive</RouterLink>
+        <RouterLink to="/settings">Settings</RouterLink>
+      </nav>
+    </header>
+    <main class="main">
+      <RouterView />
+    </main>
+  </div>
+</template>
