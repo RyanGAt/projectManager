@@ -10,7 +10,8 @@
     "frontendDist": "../dist"
   },
   "app": {
-    "windows": [{ "title": "ProjectVault", "width": 1400, "height": 900, "resizable": true }]
+    "windows": [{ "title": "ProjectVault", "width": 1400, "height": 900, "resizable": true }],
+    "security": { "assetProtocol": { "enable": true, "scope": ["$PICTURE/**"] } }
   },
   "bundle": { "active": true, "targets": "all", "icon": [] }
 }
